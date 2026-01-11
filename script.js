@@ -17,7 +17,7 @@ const links = [
     },
     {
         title: "📧 Join Newsletter (Waitlist)",
-        url: "#", // Add your newsletter link here later
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSfAAsM3X84xNV-SbTSgKi12t7BxZmd6UoEFYr8OYdjKOHRQiw/viewform?usp=dialog", // Add your newsletter link here later
         style: "standard"
     }
 ];
