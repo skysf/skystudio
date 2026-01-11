@@ -26,10 +26,11 @@ body {
     100% { background-size: 110% 110%; }
 }
 
+/* --- THE FIX IS HERE --- */
 .container {
-    width: 100%;
-    max-width: 500px; /* Slightly wider for the 16:9 image */
-    padding: 40px 20px;
+    width: 90%;         /* Takes up 90% of mobile screens */
+    max-width: 420px;   /* Stops it from getting too huge on Desktop */
+    padding: 40px 0;    /* Vertical padding */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,19 +38,20 @@ body {
 
 /* Hero Image Styles */
 .hero-container {
-    width: 100%;
+    width: 100%;       /* Fills the container width */
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
 .hero-img {
-    width: 100%;
-    height: auto;
+    width: 100%;       /* Forces image to shrink with window */
+    height: auto;      /* Keeps aspect ratio (doesn't squish) */
     border-radius: 16px;
     border: 1px solid var(--glass-border);
-    box-shadow: 0 0 30px rgba(0, 173, 181, 0.15); /* Subtle cinematic glow */
+    box-shadow: 0 0 30px rgba(0, 173, 181, 0.15);
     transition: transform 0.3s ease;
+    display: block;    /* Removes bottom gap */
 }
 
 .hero-img:hover {
@@ -65,11 +67,13 @@ body {
     margin-bottom: 30px;
     font-weight: 300;
     letter-spacing: 0.5px;
+    width: 100%;
 }
 
-/* Link Card Styles (Glassmorphism) */
+/* Link Card Styles */
 .link-card {
-    width: 100%;
+    width: 100%;      /* Responsive width */
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(10px);
@@ -81,10 +85,7 @@ body {
     text-align: center;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+    display: block;
 }
 
 .link-card:hover {
@@ -98,6 +99,11 @@ body {
     background: linear-gradient(135deg, rgba(0, 173, 181, 0.2), rgba(255, 87, 34, 0.1));
     border: 1px solid var(--accent-teal);
     box-shadow: 0 0 15px rgba(0, 173, 181, 0.2);
+}
+
+/* Links Container */
+.links-container {
+    width: 100%; /* Ensures buttons fill the width */
 }
 
 footer {
