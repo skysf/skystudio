@@ -25,12 +25,19 @@ const links = [
 // LOGIC: Do not touch below this line unless you are coding
 const listContainer = document.getElementById('link-list');
 
+// LOGIC: Updated to support icons for featured links
 links.forEach(link => {
     const a = document.createElement('a');
     a.href = link.url;
     a.className = `link-card ${link.style}`;
     a.target = "_blank"; 
-    a.innerText = link.title;
+
+    // Add the fire icon ONLY if the style is 'featured'
+    if (link.style === "featured") {
+        a.innerHTML = `<span class="hot-icon">🔥</span>${link.title}`;
+    } else {
+        a.innerText = link.title;
+    }
     
     listContainer.appendChild(a);
 });

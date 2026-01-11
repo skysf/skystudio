@@ -95,11 +95,11 @@ body {
 }
 
 /* Featured Card Style */
-.featured {
+/* .featured {
     background: linear-gradient(135deg, rgba(0, 173, 181, 0.2), rgba(255, 87, 34, 0.1));
     border: 1px solid var(--accent-teal);
     box-shadow: 0 0 15px rgba(0, 173, 181, 0.2);
-}
+} */
 
 /* Links Container */
 .links-container {
@@ -110,4 +110,20 @@ footer {
     margin-top: 40px;
     font-size: 12px;
     color: #444;
+}
+
+
+/* --- NEW: Hot Icon Styling --- */
+.hot-icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    display: inline-block;
+    /* This makes the flame pulse slightly */
+    animation: flamePulse 2s infinite ease-in-out;
+    vertical-align: middle;
+}
+
+@keyframes flamePulse {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.2); filter: brightness(1.3); }
 }
